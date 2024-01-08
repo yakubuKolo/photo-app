@@ -1,0 +1,167 @@
+{{!-- Nav bar --}}
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">PHOTO APP</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+      <a class="nav-link" href="#list-item-1">SERVICES</a>
+        </li>
+        <li class="nav-item">
+      <a class="nav-link" href="#list-item-2">ABOUT US</a>
+        </li>
+        <li class="nav-item">
+      <a class="nav-link" href="#list-item-3">CONTACT US</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+{{!-- carousel --}}
+<div id="carouselExampleCaptions" class="carousel slide shadow">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="card text-bg-dark">
+  <img src="2.jpg" class="card-img" height="260" width="315" alt="...">
+  <div class="card-img-overlay text-center mt-5">
+    <h5 class="card-title">WELCOME</h5>
+    <br>
+    <br>
+    <br>
+    <p class="card-text text-capitalize">Click here to book a shoot</p>
+  </div>
+</div>
+    </div>
+    <div class="carousel-item active">
+      <div class="card text-bg-dark">
+  <img src="7.jpg" class="card-img" height="260" width="315" alt="...">
+  <div class="card-img-overlay text-center mt-5 ">
+    <h5 class="card-title">WELCOME</h5>
+    <br>
+    <br>
+    <br>
+    <p class="card-text text-capitalize ">Click here to book a shoot</p>
+  </div>
+</div>
+    </div>
+    <div class="carousel-item active">
+      <div class="card text-bg-dark">
+  <img src="3.jpg" class="card-img" height="260" width="315" alt="...">
+  <div class="card-img-overlay text-center mt-5">
+    <h5 class="card-title">WELCOME</h5>
+    <br>
+    <br>
+    <br>
+    <p class="card-text text-capitalize">Click here to book a shoot</p>
+  </div>
+</div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+{{!-- pictures --}}
+
+               <div id="list-item-1" class="mb-3 text-center">
+                <p><b><h1>SERVICES</h1></b></p>
+
+        {{#each rows}}
+
+<a href="/pictures/{{this.cat}}" style="text-decoration: none;" class="m-3 border-dark shadow" >
+<p class="text-capitalize text-dark">{{this.cat}} Pictures</p>
+
+<div class="card"  >
+
+     {{#if this.image}}
+
+    <img class="card_image" class="card-img-top img-fluid" width="100%" height="325" src="{{this.image}}" alt="Add Photo">
+    {{else}}
+        <img class="card_image" class="card-img-top" src="/img/default.jpg" alt="Add Photo">
+{{/if}}
+  <div class="card-body text-dark text-center">
+    <p class="card-text"><b><h2 class="text-capitalize">{{this.cat}}</h2></b></p>
+        <p>{{this.description}}</p>
+  </div>
+</div>
+</a>
+
+
+
+  {{/each}} 
+              </div>
+
+
+               <div id="list-item-2" class="mb-3 text-center text-uppercase shadow">
+                <p><b><h1>about us</h1></b></p>
+                <p class="text-capitalize">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, voluptatem. Suscipit optio magnam repudiandae consequuntur, eaque labore reiciendis! Iste consequuntur iusto voluptate unde exercitationem aspernatur tempore eos facere, dolor nostrum?
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni rerum itaque, non voluptas cupiditate, facere nihil optio deserunt laboriosam perferendis quasi asperiores molestiae praesentium et blanditiis inventore aliquid, modi labore.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, corrupti consequatur, molestiae error distinctio eaque ipsam placeat, assumenda rem optio beatae sequi perspiciatis explicabo voluptates adipisci molestias iste amet dignissimos!
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni a earum harum eaque quis repellendus incidunt obcaecati nam eius, tenetur, odit in beatae saepe facilis aliquid. Expedita veniam molestiae cumque!
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam voluptas eos delectus atque adipisci necessitatibus commodi recusandae et, hic dolor, dolore iure iusto dolorem. Beatae error adipisci expedita doloremque placeat!
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae ad voluptatibus laboriosam dolore alias cumque quo provident iure, commodi numquam eius, consequuntur aliquam quae exercitationem quidem architecto consectetur nihil iste?
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, architecto? Modi incidunt, architecto eligendi quam quibusdam sapiente doloribus molestiae quaerat totam? Amet veritatis, dolor voluptatum autem error inventore animi perferendis!
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci ducimus quos rem, totam non nemo magni sunt, in inventore quas est, molestiae corrupti facilis dignissimos ad sequi tempora aspernatur nisi!
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis omnis illo quisquam doloribus saepe pariatur reiciendis ipsam dignissimos! Ipsum debitis porro, vero quis nesciunt nemo quas ut nobis distinctio eaque.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est asperiores fugit hic nulla cum velit blanditiis deleniti vitae suscipit, necessitatibus voluptatum? Eos dolorem suscipit placeat temporibus ratione corporis? Expedita, quae.
+                </p>
+               </div>
+ {{!-- contact --}}
+        <div id="list-item-3" class="mb-3 text-center shadow">
+
+                                <h1 style="text-align: center; text-decoration: underline;">CONTACT US</h1>
+
+
+<p>CALL US</p>
+
+<p><a href="tel:+2348149407400"><svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M2.59 1.322l2.844-1.322 4.041 7.889-2.724 1.342c-.538 1.259 2.159 6.289 3.297 6.372.09-.058 2.671-1.328 2.671-1.328l4.11 7.932s-2.764 1.354-2.854 1.396c-.598.273-1.215.399-1.842.397-5.649-.019-12.086-10.43-12.133-17.33-.016-2.407.745-4.387 2.59-5.348zm1.93 1.274l-1.023.504c-5.294 2.762 4.177 21.185 9.648 18.686l.972-.474-2.271-4.383-1.026.501c-3.163 1.547-8.262-8.219-5.055-9.938l1.007-.498-2.252-4.398zm15.48 14.404h-1v-13h1v13zm-2-2h-1v-9h1v9zm4-1h-1v-7h1v7zm-6-1h-1v-5h1v5zm-2-1h-1v-3h1v3zm10 0h-1v-3h1v3zm-12-1h-1v-1h1v1z"/></svg></a></p>
+
+    <p>VISIT OR SOCIAL MEDIA PLATFORMS</p>
+
+
+    <div class="row shadow m-5">
+        <div class="col-md-4 m-2"><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path d="M15.233 5.488c-.843-.038-1.097-.046-3.233-.046s-2.389.008-3.232.046c-2.17.099-3.181 1.127-3.279 3.279-.039.844-.048 1.097-.048 3.233s.009 2.389.047 3.233c.099 2.148 1.106 3.18 3.279 3.279.843.038 1.097.047 3.233.047 2.137 0 2.39-.008 3.233-.046 2.17-.099 3.18-1.129 3.279-3.279.038-.844.046-1.097.046-3.233s-.008-2.389-.046-3.232c-.099-2.153-1.111-3.182-3.279-3.281zm-3.233 10.62c-2.269 0-4.108-1.839-4.108-4.108 0-2.269 1.84-4.108 4.108-4.108s4.108 1.839 4.108 4.108c0 2.269-1.839 4.108-4.108 4.108zm4.271-7.418c-.53 0-.96-.43-.96-.96s.43-.96.96-.96.96.43.96.96-.43.96-.96.96zm-1.604 3.31c0 1.473-1.194 2.667-2.667 2.667s-2.667-1.194-2.667-2.667c0-1.473 1.194-2.667 2.667-2.667s2.667 1.194 2.667 2.667zm4.333-12h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm.952 15.298c-.132 2.909-1.751 4.521-4.653 4.654-.854.039-1.126.048-3.299.048s-2.444-.009-3.298-.048c-2.908-.133-4.52-1.748-4.654-4.654-.039-.853-.048-1.125-.048-3.298 0-2.172.009-2.445.048-3.298.134-2.908 1.748-4.521 4.654-4.653.854-.04 1.125-.049 3.298-.049s2.445.009 3.299.048c2.908.133 4.523 1.751 4.653 4.653.039.854.048 1.127.048 3.299 0 2.173-.009 2.445-.048 3.298z"/></svg></a></div>
+        <div class="col-md-4 m-2"><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-.139 9.237c.209 4.617-3.234 9.765-9.33 9.765-1.854 0-3.579-.543-5.032-1.475 1.742.205 3.48-.278 4.86-1.359-1.437-.027-2.649-.976-3.066-2.28.515.098 1.021.069 1.482-.056-1.579-.317-2.668-1.739-2.633-3.26.442.246.949.394 1.486.411-1.461-.977-1.875-2.907-1.016-4.383 1.619 1.986 4.038 3.293 6.766 3.43-.479-2.053 1.08-4.03 3.199-4.03.943 0 1.797.398 2.395 1.037.748-.147 1.451-.42 2.086-.796-.246.767-.766 1.41-1.443 1.816.664-.08 1.297-.256 1.885-.517-.439.656-.996 1.234-1.639 1.697z"/></svg></a></div>
+        <div class="col-md-4 m-2" style="width: 50;"><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-1.141 17.115c-.065.087-.117.457-.203.749-.098.337-.407.299-.75.232-.499-.097-.945-.125-1.464-.039-.898.149-1.83 1.477-3.393 1.477-1.682 0-2.557-1.321-3.49-1.477-.951-.158-1.497.096-1.826.096-.252 0-.35-.154-.388-.282-.084-.287-.138-.664-.204-.754-.646-.1-2.103-.354-2.141-1.005-.009-.169.11-.318.277-.346 2.139-.352 3.501-2.765 3.279-3.287-.158-.372-.84-.505-1.127-.619-.74-.293-.843-.63-.799-.86.061-.32.451-.535.778-.535.314 0 .869.42 1.301.181-.065-1.123-.223-2.728.177-3.624.763-1.71 2.434-2.555 4.105-2.555 1.683 0 3.366.858 4.123 2.554.399.895.242 2.493.178 3.625.408.225.913-.191 1.265-.191.345 0 .814.233.822.623.006.305-.266.568-.809.782-.292.115-.969.248-1.127.619-.227.535 1.177 2.941 3.279 3.287.167.027.287.176.277.346-.036.65-1.5.903-2.14 1.003z"/></svg></a></div>
+    </div>
+
+<p>VISIT OUR HEADQUATERS</p>
+
+    <div id="map">
+
+    <script>
+     function initMap(){
+         let location = {lat: 12.000000, lng: 8.516667};
+         var map = new google.maps.Map(document.getElementById("map"),
+         {
+             zoom : 4,
+             center : location
+         });
+         var marker = new google.maps.Marker({
+             position : location,
+             map : map
+         })
+     }
+
+    </script>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYzXj5wF4L6mChyyc5xwfb2QT1QEZ9VN8&callback=initMap">
+
+    </script>
+                                </div>

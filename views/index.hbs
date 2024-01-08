@@ -1,0 +1,69 @@
+<form action="/addimage" method="post" enctype="multipart/form-data">
+{{!-- <h3>Upload Profile Photo</h3>
+<input type="file" name="samplefile" accept="image/*">
+
+<input type="radio" name="cat" value="baby">
+<input type="radio" name="cat" value="wedding">
+<input type="radio" name="cat" value="graduation">
+
+<input type="text" name="desc">  --}}
+
+
+<div class="mb-3">
+  <label for="formFileMultiple" class="form-label">Upload Photo</label>
+  <input class="form-control" type="file" name="samplefile" id="formFileMultiple">
+</div>
+<div class="mb-3">
+  <label for="formFileMultiple" class="form-label">Upload Photo</label>
+  <input class="form-control" type="file" name="samplefile" id="formFileMultiple">
+</div>
+
+
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="cat" id="flexRadioDefault1" value="baby">
+  <label class="form-check-label" for="flexRadioDefault1">
+    Baby
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="cat" id="flexRadioDefault2" value="wedding">
+  <label class="form-check-label" for="flexRadioDefault2">
+    Wedding
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="cat" id="flexRadioDefault3" value="graduation">
+  <label class="form-check-label" for="flexRadioDefault2">
+    Graduation
+  </label>
+</div>
+
+  <div class="col-6">
+     <div class="form-floating mb-3">
+  <input type="text" class="form-control" id="floatingInput" placeholder="Description" name="desc">
+ <label for="floatingInput">Description</label>
+</div> 
+  </div>
+
+  <input type="submit"  class="btn btn-primary">
+
+
+    {{!-- {{#each rows}}
+ {{#if this.image}}
+
+<div>
+    <img class="card_image" src="{{this.image}}" alt="Add Photo">
+    {{else}}
+        <img class="card_image" src="/img/default.jpg" alt="Add Photo">
+{{/if}}
+
+<h1 class="card_title">{{this.name}}</h1>
+<div class="card_job">{{this.job_title}}</div>
+<p class="card_about">
+{{this.description}}
+</p>
+    {{/each}} --}}
+
+</div>
+
+</form>
